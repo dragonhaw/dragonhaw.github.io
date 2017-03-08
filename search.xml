@@ -3,16 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[搭建博客心得]]></title>
-      <url>%2F2017%2F03%2F07%2F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%BF%83%E5%BE%97%2F</url>
-      <content type="text"><![CDATA[你们好呀你们好呀你们好呀你们好呀你们好呀 你们好呀你们好呀你们好呀你们好呀你们好呀 你们好呀 你们好呀 你们好呀你们好呀你们好呀你们好呀你们好呀你们好呀你们好呀v你们好呀vv你们好呀你们好呀 你们好呀 你们好呀你们好呀你们好呀你们好呀你们好呀你们好呀v]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>%2F2017%2F03%2F07%2Fhello-world%2F</url>
-      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <title><![CDATA[启动Eclipse提示找不到虚拟机解决方法]]></title>
+      <url>%2F2017%2F03%2F08%2F%E5%90%AF%E5%8A%A8Eclipse%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[之前配置好了JDK环境变量，但是在配置Android的路径后，打开Eclipse就报错。 原因分析 可能是你在重新添加Android环境变量的时候，重新创建了Path环境变量，这样新的环境变量就会把以前的jdk的Path环境变量给覆盖，然后导致Eclipse找不到虚拟机。 可能是你自己误操作把Path的环境变量给删掉了。 解决方法 你可以把Android环境变量跟JDK环境变量写在一起，中间用；隔开，在Path环境变量中加上；%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; 你也可以在eclipse安装路径下的eclipse.ini文件里开始添加以下2行显式指定路径：-vm（加上你自己的javaw.exe所在地方）例如：-vmD:\Java\jdk1.6.0_31\bin\javaw.exe]]></content>
     </entry>
 
     

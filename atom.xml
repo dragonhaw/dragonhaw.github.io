@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dragonhaw.tech/"/>
-  <updated>2017-03-08T01:37:26.126Z</updated>
+  <updated>2017-03-08T03:05:00.689Z</updated>
   <id>http://dragonhaw.tech/</id>
   
   <author>
@@ -16,51 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>搭建博客心得</title>
-    <link href="http://dragonhaw.tech/2017/03/07/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%BF%83%E5%BE%97/"/>
-    <id>http://dragonhaw.tech/2017/03/07/搭建博客心得/</id>
-    <published>2017-03-07T05:07:46.000Z</published>
-    <updated>2017-03-08T01:37:26.126Z</updated>
+    <title>启动Eclipse提示找不到虚拟机解决方法</title>
+    <link href="http://dragonhaw.tech/2017/03/08/%E5%90%AF%E5%8A%A8Eclipse%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://dragonhaw.tech/2017/03/08/启动Eclipse提示找不到虚拟机解决方法/</id>
+    <published>2017-03-08T02:34:36.000Z</published>
+    <updated>2017-03-08T03:05:00.689Z</updated>
     
-    <content type="html"><![CDATA[<p>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀             你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀             你们好呀             你们好呀             你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>v你们好呀<br>vv你们好呀<br>你们好呀             你们好呀             你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>你们好呀<br>v</p>
+    <content type="html"><![CDATA[<p>之前配置好了JDK环境变量，但是在配置Android的路径后，打开Eclipse就报错。</p>
+<p><img src="http://img.blog.csdn.net/20160906100404236" class="full-image"><br><a id="more"></a></p>
+<h2 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h2><ul>
+<li><p>可能是你在重新添加Android环境变量的时候，重新创建了Path环境变量，这样新的环境变量就会把以前的jdk的Path环境变量给覆盖，然后导致Eclipse找不到虚拟机。</p>
+</li>
+<li><p>可能是你自己误操作把Path的环境变量给删掉了。</p>
+</li>
+</ul>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
+<li><p>你可以把Android环境变量跟JDK环境变量写在一起，中间用；隔开，在Path环境变量中加上；%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</p>
+</li>
+<li><p>你也可以在eclipse安装路径下的eclipse.ini文件里开始添加以下2行显式指定路径：<br>-vm<br>（加上你自己的javaw.exe所在地方）<br>例如：<br>-vm<br>D:\Java\jdk1.6.0_31\bin\javaw.exe</p>
+</li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;你们好呀&lt;br&gt;你们好呀&lt;br&gt;你们好呀&lt;br&gt;你们好呀&lt;br&gt;你们好呀             你们好呀&lt;br&gt;你们好呀&lt;br&gt;你们好呀&lt;br&gt;你们好呀&lt;br&gt;你们好呀             你们好呀             你们好呀             你们好呀&lt;
+      &lt;p&gt;之前配置好了JDK环境变量，但是在配置Android的路径后，打开Eclipse就报错。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160906100404236&quot; class=&quot;full-image&quot; /&gt;&lt;br&gt;
     
     </summary>
     
-      <category term="心得" scheme="http://dragonhaw.tech/categories/%E5%BF%83%E5%BE%97/"/>
-    
-    
-      <category term="感想" scheme="http://dragonhaw.tech/tags/%E6%84%9F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://dragonhaw.tech/2017/03/07/hello-world/"/>
-    <id>http://dragonhaw.tech/2017/03/07/hello-world/</id>
-    <published>2017-03-07T01:21:34.677Z</published>
-    <updated>2017-03-07T01:21:34.678Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
+      <category term="常见错误" scheme="http://dragonhaw.tech/categories/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
     
     
   </entry>
