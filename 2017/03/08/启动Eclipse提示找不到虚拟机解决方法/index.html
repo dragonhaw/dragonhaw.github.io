@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="何嘉龙の博客">
 <meta property="og:description" content="之前配置好了JDK环境变量，但是在配置Android的路径后，打开Eclipse就报错。">
 <meta property="og:image" content="http://img.blog.csdn.net/20160906100404236">
-<meta property="og:updated_time" content="2017-03-08T03:05:00.689Z">
+<meta property="og:updated_time" content="2017-03-08T03:23:05.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="启动Eclipse提示找不到虚拟机解决方法">
 <meta name="twitter:description" content="之前配置好了JDK环境变量，但是在配置Android的路径后，打开Eclipse就报错。">
@@ -421,7 +421,7 @@
 </li>
 </ul>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
-<li><p>你可以把Android环境变量跟JDK环境变量写在一起，中间用；隔开，在Path环境变量中加上；%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</p>
+<li><p>你可以把Android环境变量跟JDK环境变量写在一起，中间用；隔开，在Path环境变量中加上;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</p>
 </li>
 <li><p>你也可以在eclipse安装路径下的eclipse.ini文件里开始添加以下2行显式指定路径：<br>-vm<br>（加上你自己的javaw.exe所在地方）<br>例如：<br>-vm<br>D:\Java\jdk1.6.0_31\bin\javaw.exe</p>
 </li>
