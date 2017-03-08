@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>何嘉龙の博客</title>
-  
+  <subtitle>热爱生活，热爱分享</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dragonhaw.tech/"/>
