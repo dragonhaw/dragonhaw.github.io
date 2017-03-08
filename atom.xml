@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dragonhaw.tech/"/>
-  <updated>2017-03-08T03:23:05.707Z</updated>
+  <updated>2017-03-08T17:11:08.684Z</updated>
   <id>http://dragonhaw.tech/</id>
   
   <author>
@@ -14,6 +14,109 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>求小球落地五次后的路程</title>
+    <link href="http://dragonhaw.tech/2017/03/09/%E6%B1%82%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E4%BA%94%E6%AC%A1%E5%90%8E%E7%9A%84%E8%B7%AF%E7%A8%8B/"/>
+    <id>http://dragonhaw.tech/2017/03/09/求小球落地五次后的路程/</id>
+    <published>2017-03-08T16:24:38.000Z</published>
+    <updated>2017-03-08T17:11:08.684Z</updated>
+    
+    <content type="html"><![CDATA[<p>###题目描述<br>假设一个球从任意高度自由落下，每次落地后反跳回原高度的一半; 再落下, 求它在第5次落地时，共经历多少米?第5次反弹多高？ </p>
+<p>###输入描述</p>
+<blockquote>
+<p>输入起始高度，int型</p>
+</blockquote>
+<p>###输出描述</p>
+<blockquote>
+<p>分别输出第5次落地时，共经过多少米第5次反弹多高 </p>
+</blockquote>
+<p>###输入例子</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<p>###输出例子</p>
+<blockquote>
+<p>2.875  </p>
+<p>0.0315</p>
+</blockquote>
+<p>###思路<br>在看到这种题的时候，我们脑海中应该呈现出的是画图，然后找到规律。</p>
+<p><img src="http://i.imgur.com/j3W29KT.png" class="full-image"><br><a id="more"></a></p>
+<p>可以看出，除了第一次落地的路径为一次外，其他都是两次。</p>
+<p>所以，我们的代码可以这么写：</p>
+<pre><code>import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while(in.hasNext()) {
+            double n = Double.parseDouble(in.next());
+            System.out.println(getJourney(n));
+            System.out.println(getTenthHigh(n));
+        }
+    }
+
+    public static double getJourney(double high) {
+        double count = high;
+        for(int i = 1; i &lt; 5; i++) {
+            high = high / 2;
+            count = count + high * 2;
+        }
+        return count;
+    }
+
+    public static double getTenthHigh(double high) {
+        for(int i = 0; i &lt; 5; i++) {
+            high /= 2;
+        }
+        return high;
+    }
+}
+</code></pre><p>当然，有一种很牛逼的写法：</p>
+<pre><code>import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while(in.hasNext()) {
+             double n = Double.parseDouble(in.next());
+             System.out.println(n * 2.875);
+             System.out.println(n * 0.03125);
+         }
+    }
+}
+</code></pre><p>这种是按比例缩放，当高度为1的时候，对应的路程为2.875，高度为0.03125。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###题目描述&lt;br&gt;假设一个球从任意高度自由落下，每次落地后反跳回原高度的一半; 再落下, 求它在第5次落地时，共经历多少米?第5次反弹多高？ &lt;/p&gt;
+&lt;p&gt;###输入描述&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入起始高度，int型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###输出描述&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;分别输出第5次落地时，共经过多少米第5次反弹多高 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###输入例子&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###输出例子&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2.875  &lt;/p&gt;
+&lt;p&gt;0.0315&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###思路&lt;br&gt;在看到这种题的时候，我们脑海中应该呈现出的是画图，然后找到规律。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/j3W29KT.png&quot; class=&quot;full-image&quot; /&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="华为机试" scheme="http://dragonhaw.tech/tags/%E5%8D%8E%E4%B8%BA%E6%9C%BA%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>启动Eclipse提示找不到虚拟机解决方法</title>
