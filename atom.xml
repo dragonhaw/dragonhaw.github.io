@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dragonhaw.tech/"/>
-  <updated>2017-03-08T17:11:08.684Z</updated>
+  <updated>2017-03-08T17:14:59.234Z</updated>
   <id>http://dragonhaw.tech/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dragonhaw.tech/2017/03/09/%E6%B1%82%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E4%BA%94%E6%AC%A1%E5%90%8E%E7%9A%84%E8%B7%AF%E7%A8%8B/"/>
     <id>http://dragonhaw.tech/2017/03/09/求小球落地五次后的路程/</id>
     <published>2017-03-08T16:24:38.000Z</published>
-    <updated>2017-03-08T17:11:08.684Z</updated>
+    <updated>2017-03-08T17:14:59.234Z</updated>
     
     <content type="html"><![CDATA[<p>###题目描述<br>假设一个球从任意高度自由落下，每次落地后反跳回原高度的一半; 再落下, 求它在第5次落地时，共经历多少米?第5次反弹多高？ </p>
 <p>###输入描述</p>
@@ -112,6 +112,8 @@ public class Main {
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/j3W29KT.png&quot; class=&quot;full-image&quot; /&gt;&lt;br&gt;
     
     </summary>
+    
+      <category term="华为机试" scheme="http://dragonhaw.tech/categories/%E5%8D%8E%E4%B8%BA%E6%9C%BA%E8%AF%95/"/>
     
     
       <category term="华为机试" scheme="http://dragonhaw.tech/tags/%E5%8D%8E%E4%B8%BA%E6%9C%BA%E8%AF%95/"/>
