@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[搭建博客心得]]></title>
+      <url>%2F2017%2F03%2F07%2F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%BF%83%E5%BE%97%2F</url>
+      <content type="text"><![CDATA[你们好呀你们好呀你们好呀你们好呀你们好呀 你们好呀你们好呀你们好呀你们好呀你们好呀 你们好呀 你们好呀 你们好呀你们好呀你们好呀你们好呀你们好呀你们好呀你们好呀v你们好呀vv你们好呀你们好呀 你们好呀 你们好呀你们好呀你们好呀你们好呀你们好呀你们好呀v]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>%2F2017%2F03%2F07%2Fhello-world%2F</url>
+      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    </entry>
+
+    
+  
+  
+</search>
