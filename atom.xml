@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dragonhaw.tech/"/>
-  <updated>2017-11-16T07:15:12.661Z</updated>
+  <updated>2017-11-16T12:13:39.150Z</updated>
   <id>http://dragonhaw.tech/</id>
   
   <author>
@@ -20,69 +20,30 @@
     <link href="http://dragonhaw.tech/2017/03/09/%E6%B1%82%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E4%BA%94%E6%AC%A1%E5%90%8E%E7%9A%84%E8%B7%AF%E7%A8%8B/"/>
     <id>http://dragonhaw.tech/2017/03/09/求小球落地五次后的路程/</id>
     <published>2017-03-08T16:24:38.000Z</published>
-    <updated>2017-11-16T07:15:12.661Z</updated>
+    <updated>2017-11-16T12:13:39.150Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>假设一个球从任意高度自由落下，每次落地后反跳回原高度的一半; 再落下, 求它在第5次落地时，共经历多少米?第5次反弹多高？ </p>
-<h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><blockquote>
-<p>输入起始高度，int型</p>
+    <content type="html"><![CDATA[<h4 id="题目描述"><a href="# 题目描述" class="headerlink" title="题目描述"></a>题目描述 </h4><p> 假设一个球从任意高度自由落下，每次落地后反跳回原高度的一半; 再落下, 求它在第 5 次落地时，共经历多少米? 第 5 次反弹多高？ </p>
+<h4 id="输入描述"><a href="# 输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><blockquote>
+<p>输入起始高度，int 型</p>
 </blockquote>
-<h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><blockquote>
-<p>分别输出第5次落地时，共经过多少米第5次反弹多高 </p>
+<h4 id="输出描述"><a href="# 输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><blockquote>
+<p>分别输出第 5 次落地时，共经过多少米第 5 次反弹多高 </p>
 </blockquote>
 <a id="more"></a>
-<h4 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h4><blockquote>
+<h4 id="输入例子"><a href="# 输入例子" class="headerlink" title="输入例子"></a>输入例子</h4><blockquote>
 <p>1</p>
 </blockquote>
-<h4 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h4><blockquote>
+<h4 id="输出例子"><a href="# 输出例子" class="headerlink" title="输出例子"></a>输出例子</h4><blockquote>
 <p>2.875  </p>
 <p>0.0315</p>
 </blockquote>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>在看到这种题的时候，我们脑海中应该呈现出的是画图，然后找到规律。</p>
+<h4 id="思路"><a href="# 思路" class="headerlink" title="思路"></a>思路 </h4><p> 在看到这种题的时候，我们脑海中应该呈现出的是画图，然后找到规律。</p>
 <p><img src="http://i.imgur.com/j3W29KT.png" class="full-image"></p>
 <p>可以看出，除了第一次落地的路径为一次外，其他都是两次。</p>
 <p>所以，我们的代码可以这么写：</p>
-<pre><code>import java.util.*;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        while(in.hasNext()) {
-            double n = Double.parseDouble(in.next());
-            System.out.println(getJourney(n));
-            System.out.println(getTenthHigh(n));
-        }
-    }
-
-    public static double getJourney(double high) {
-        double count = high;
-        for(int i = 1; i &lt; 5; i++) {
-            high = high / 2;
-            count = count + high * 2;
-        }
-        return count;
-    }
-
-    public static double getTenthHigh(double high) {
-        for(int i = 0; i &lt; 5; i++) {
-            high /= 2;
-        }
-        return high;
-    }
-}
-</code></pre><p>当然，有一种很牛逼的写法：</p>
-<pre><code>import java.util.*;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        while(in.hasNext()) {
-             double n = Double.parseDouble(in.next());
-             System.out.println(n * 2.875);
-             System.out.println(n * 0.03125);
-         }
-    }
-}
-</code></pre><p>这种是按比例缩放，当高度为1的时候，对应的路程为<code>2.875</code>，高度为<code>0.03125</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">        <span class="keyword">while</span>(in.hasNext()) &#123;</div><div class="line">            <span class="keyword">double</span> n = Double.parseDouble(in.next());</div><div class="line">            System.out.println(getJourney(n));</div><div class="line">            System.out.println(getTenthHigh(n));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">getJourney</span><span class="params">(<span class="keyword">double</span> high)</span> </span>&#123;</div><div class="line">        <span class="keyword">double</span> count = high;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">5</span>; i++) &#123;</div><div class="line">            high = high / <span class="number">2</span>;</div><div class="line">            count = count + high * <span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> count;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">getTenthHigh</span><span class="params">(<span class="keyword">double</span> high)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</div><div class="line">            high /= <span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> high;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当然，有一种很牛逼的写法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">        <span class="keyword">while</span>(in.hasNext()) &#123;</div><div class="line">             <span class="keyword">double</span> n = Double.parseDouble(in.next());</div><div class="line">             System.out.println(n * <span class="number">2.875</span>);</div><div class="line">             System.out.println(n * <span class="number">0.03125</span>);</div><div class="line">         &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种是按比例缩放，当高度为 1 的时候，对应的路程为<code>2.875</code>，高度为<code>0.03125</code>。</p>
 ]]></content>
     
     <summary type="html">
@@ -103,24 +64,24 @@ public class Main {
   </entry>
   
   <entry>
-    <title>启动Eclipse提示找不到虚拟机解决方法</title>
+    <title>启动 Eclipse 提示找不到虚拟机解决方法</title>
     <link href="http://dragonhaw.tech/2017/03/08/%E5%90%AF%E5%8A%A8Eclipse%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     <id>http://dragonhaw.tech/2017/03/08/启动Eclipse提示找不到虚拟机解决方法/</id>
     <published>2017-03-08T02:34:36.000Z</published>
-    <updated>2017-03-08T03:23:05.708Z</updated>
+    <updated>2017-11-16T12:16:43.423Z</updated>
     
-    <content type="html"><![CDATA[<p>之前配置好了JDK环境变量，但是在配置Android的路径后，打开Eclipse就报错。</p>
+    <content type="html"><![CDATA[<p> 之前配置好了 JDK 环境变量，但是在配置 Android 的路径后，打开 Eclipse 就报错。</p>
 <p><img src="http://img.blog.csdn.net/20160906100404236" class="full-image"><br><a id="more"></a></p>
-<h2 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h2><ul>
-<li><p>可能是你在重新添加Android环境变量的时候，重新创建了Path环境变量，这样新的环境变量就会把以前的jdk的Path环境变量给覆盖，然后导致Eclipse找不到虚拟机。</p>
+<h4 id="原因分析"><a href="# 原因分析" class="headerlink" title="原因分析"></a> 原因分析 </h4><ul>
+<li><p> 可能是你在重新添加 Android 环境变量的时候，重新创建了 Path 环境变量，这样新的环境变量就会把以前的 jdk 的 Path 环境变量给覆盖，然后导致 Eclipse 找不到虚拟机。</p>
 </li>
-<li><p>可能是你自己误操作把Path的环境变量给删掉了。</p>
+<li><p> 可能是你自己误操作把 Path 的环境变量给删掉了。</p>
 </li>
 </ul>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
-<li><p>你可以把Android环境变量跟JDK环境变量写在一起，中间用；隔开，在Path环境变量中加上;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</p>
+<h4 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a> 解决方法 </h4><ul>
+<li><p> 你可以把 Android 环境变量跟 JDK 环境变量写在一起，中间用；隔开，在 Path 环境变量中加上;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</p>
 </li>
-<li><p>你也可以在eclipse安装路径下的eclipse.ini文件里开始添加以下2行显式指定路径：<br>-vm<br>（加上你自己的javaw.exe所在地方）<br>例如：<br>-vm<br>D:\Java\jdk1.6.0_31\bin\javaw.exe</p>
+<li><p> 你也可以在 eclipse 安装路径下的 eclipse.ini 文件里开始添加以下 2 行显式指定路径：<br>-vm<br>（加上你自己的 javaw.exe 所在地方）<br> 例如：<br>-vm<br>D:\Java\jdk1.6.0_31\bin\javaw.exe</p>
 </li>
 </ul>
 ]]></content>
