@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[感悟]]></title>
+      <url>%2F2018%2F04%2F28%2F%E6%84%9F%E6%82%9F%2F</url>
+      <content type="text"><![CDATA[感悟 重新搭建了博客，之前的 dragonhaw.tech 的域名到期了，第二年的续费需要 50 块大洋，有些许舍不得，所以将博客的域名重新绑定到了 GitHub Pages 上。 让我重新拾起博客的原因有许多，最近的情感太丰富了，有太多的东西想分享了，但是又不想在新浪微博上分享，因为还是有几个好朋友关注我的，不想太过烦他（她）们，所以准备在自己的个人的博客上面记录自己的想法。 实习后，对时间越来越重视了，很担心时间的浪费。与学校相比，感受最不同的是，在学校是有大把的时间没多少钱，上班有了钱却没了时间。也可能是自己没有选择继续深造，只能跑得比别人更快，才会有安全感。危机意识越来越强烈了。 中兴事件尤为让我感受到，人是逐利的，也是短视的。不管怎么样，都不能太过于依赖别人，要有危机意识。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[求小球落地五次后的路程]]></title>
       <url>%2F2017%2F03%2F09%2F%E6%B1%82%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E4%BA%94%E6%AC%A1%E5%90%8E%E7%9A%84%E8%B7%AF%E7%A8%8B%2F</url>
       <content type="text"><![CDATA[题目描述 假设一个球从任意高度自由落下，每次落地后反跳回原高度的一半; 再落下, 求它在第 5 次落地时，共经历多少米? 第 5 次反弹多高？ 输入描述 输入起始高度，int 型 输出描述 分别输出第 5 次落地时，共经过多少米第 5 次反弹多高 输入例子 1 输出例子 2.875 0.0315 思路 在看到这种题的时候，我们脑海中应该呈现出的是画图，然后找到规律。 可以看出，除了第一次落地的路径为一次外，其他都是两次。 所以，我们的代码可以这么写： 12345678910111213141516171819202122232425262728import java.util.*;public class Main &#123; public static void main(String[] args) &#123; Scanner in = new Scanner(System.in); while(in.hasNext()) &#123; double n = Double.parseDouble(in.next()); System.out.println(getJourney(n)); System.out.println(getTenthHigh(n)); &#125; &#125; public static double getJourney(double high) &#123; double count = high; for(int i = 1; i &lt; 5; i++) &#123; high = high / 2; count = count + high * 2; &#125; return count; &#125; public static double getTenthHigh(double high) &#123; for(int i = 0; i &lt; 5; i++) &#123; high /= 2; &#125; return high; &#125;&#125; 当然，有一种很牛逼的写法：123456789101112import java.util.*;public class Main &#123; public static void main(String[] args) &#123; Scanner in = new Scanner(System.in); while(in.hasNext()) &#123; double n = Double.parseDouble(in.next()); System.out.println(n * 2.875); System.out.println(n * 0.03125); &#125; &#125;&#125; 这种是按比例缩放，当高度为 1 的时候，对应的路程为2.875，高度为0.03125。]]></content>
